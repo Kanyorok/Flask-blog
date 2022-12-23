@@ -1,0 +1,29 @@
+{% extends "base.html" %}{% block title %}Home{% endblock %}
+{% block logo%}
+<div>
+  <img src="{{url_for('static', filename='log.png')}}" alt="logo" type="image/x-icon" style="width: 125px; height: 50px;"/>
+</div>
+{% endblock %} 
+{% block content%}
+<hr>
+<h1 align="center">Make a Post</h1>
+<hr>
+<br>
+<hr>
+<form method="POST" enctype="multipart/form-data">
+  <div class="mb-3">
+    <input type="file" class="form-control" name="uploaded-file" id="image">
+  </div>
+  <textarea name="text" id="text" class="form-control"></textarea>
+  <br />
+  <div align="center">
+    <button type="submit" class="btn btn-lg btn-primary">Post</button>
+  </div>
+</form>
+<br />
+<div align="center">
+  <a href="/home"
+    ><button type="button" class="btn btn-lg btn-secondary">Back</button></a
+  >
+</div>
+{% endblock %}
